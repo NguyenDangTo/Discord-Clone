@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord </title>
+    <link rel="stylesheet" href="./assets/CSS/base.css">
+    <link rel="stylesheet" href="./assets/CSS/main.css">
+    <link rel="stylesheet" href="./assets/CSS/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Open+Sans:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+            </a>
+        </div>
+        <ul class="linkList">
+            <li class="homePage"><a href="">Home Page</li></a>
+            <li class="download"><a href="/download">Download</li></a>
+            <li class="nitro"><a href="/nitro">Nitro</li></a>
+            <li class="safely"><a href="/safety">Safety</li></a>
+            <li class="support"><a href="/support">Support</li></a>
+            <li class="blog"><a href="/blog">Blog</li></a>
+            <li class="careers"><a href="/jobs">Careers</li></a>
+        </ul>
+        <div class="mobileBtnContainer">
+            <a href="" class="log-btn">Log in</a>
+            <i class="fas fa-bars" id="menuBtn"></i>
+        </div>
+        <div class="backdrop">
+            <div class="navMobileContainer">
+                <button id="closeNavMobile">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="navMobileContainer">
+                    <div class="logo">
+                        <a href="">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                    <ul class="linkList">
+                        <li class="homePage active"><a href="">Home Page</li></a>
+                        <li class="download"><a href="/download">Download</li></a>
+                        <li class="nitro"><a href="/nitro">Nitro</li></a>
+                        <li class="safely"><a href="/safety">Safety</li></a>
+                        <li class="support"><a href="/support">Support</li></a>
+                        <li class="blog"><a href="/blog">Blog</li></a>
+                        <li class="careers"><a href="/jobs">Careers</li></a>
+                    </ul>
+                    <div class="btnContainer">
+                        <a href="" class="download">
+                            <i class="fas fa-download"></i>
+                            Download for Window</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="main-container">
+        <div class="container container-1">
+            <img src="./assets/imgs/background.png"alt="">
+            <div class="description">
+                <h2>imagine a place...</h2>
+                <div class="text">…where you can join a school club, a gaming group or an arts community.
+                    Where it's just you and some friends spending time together.
+                    A place that makes it easier for you to have daily conversations and meet more often.
+                </div>
+                <div class="btnContainer">
+                    <a href="" class="download">
+                        <i class="fas fa-download"></i>
+                        Download for Window</a>
+                    <button id="openBtn" onclick="enterUsername()">
+                        Open Discord in browser
+                    </button>
+                </div>
+                <div class="formContainer">
+                    <form action="">
+                        <input type="text" placeholder="Enter username">
+                        <button>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <div class="termsContainer">
+                        By clicking the subscribe button, you agree to Discord's
+                        <a href="">Terms of Service</a> and
+                        <a href="">Privacy Policy</a> .
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-2">
+            <img src="./assets/imgs/1.svg" alt="">
+            <div class="text">
+                <h2 class="title">Create a place for you and only for those who receive the invitation</h2>
+                <div class="description">Discord servers are organized by topic channels that you can manage, share,
+                     and talk about in your daily life without disturbing the group chat.</div>
+            </div>
+        </div>
+
+        <div class="container container-3">
+            <img src="./assets/imgs/2.svg" alt="">
+            <div class="text">
+                <h2 class="title">Easy place to have fun</h2>
+                <div class="description">Put a tile in a voice channel when you are free. Friends in your server
+                    can see your status and immediately jump in to talk without having to call.
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="container container-4">
+            <img src="./assets/imgs/3.svg" alt="">
+            <div class="text">
+                <h2 class="title">From a little to a fandom</h2>
+                <div class="description">Create a community of any size with member access and management tools.
+                    Give members special permissions, create your own channel, and more.
+                </div>
+            </div>   
+        </div>
+        <div class="container container-5">
+            <img src="./assets/imgs/4.svg" alt="">
+            <div class="text">
+                <h2 class="title">TRUSTED TECHNOLOGY TO KEEP IN TOUCH</h2>
+                <div class="description">Low-latency voice and video help make it feel like
+                    you're talking face-to-face. Wave hello while video chatting, watch friends
+                    stream their games, or gather and draw for each other with screen sharing.
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div class="subfooter">
+        <img src="./assets/imgs/sparkles.svg" alt="">
+        <h2 class="title">Ready to start the adventure?</h2>
+        <a href="" class="download">
+            <i class="fas fa-download"></i>
+            Download for Window
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="row1">
+            <div class="infoBox">
+                <h2 class="title">imagine a place</h2>
+                <div id="country-list">
+                    <img src="./assets/imgs/flagVN.png" alt="" class="flag">
+                    <select name="country" id="country">
+                        <option value="0">Vietnamese</option>
+                        <option value="1">English,USA</option>
+                        <option value="2">French</option>
+                        <option value="3">Japanses</option>
+                        <option value="4">Russian</option>
+                    </select>
+                </div>
+                <div class="link-list">
+                    <a href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="section section1">
+                <div class="title">Product</div>
+                <a href="">Download</a>
+                <a href="">Nitro</a>
+                <a href="">Status</a>
+            </div>
+            <div class="section section2">
+                <div class="title">The company</div>
+                <a href="">Introduce</a>
+                <a href="">Work</a>
+                <a href="">Trademark</a>
+                <a href="">Newsroom</a>
+            </div>
+            <div class="section section3">
+                <div class="title">Reference source</div>
+                <a href="">College</a>
+                <a href="">Support</a>
+                <a href="">Safe</a>
+                <a href="">Blog</a>
+                <a href="">Feedback</a>
+                <a href="">Developers</a>
+                <a href="">SteamKit</a>
+            </div>
+            <div class="section section4">
+                <div class="title">Policy</div>
+                <a href="">Rules</a>
+                <a href="">Security</a>
+                <a href="">Cookie Settings</a>
+                <a href="">Instruct</a>
+                <a href="">Best Regards</a>
+                <a href="">License</a>
+                <a href="">Cordinator</a>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="logo">
+                <a href="">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+            </div>
+            <a class="register" href="">Register</a>
+        </div>
+    </footer>
+    <script src="./JS/main.js"></script>
+</body>
+</html>

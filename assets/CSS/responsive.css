@@ -1,0 +1,117 @@
+@media screen and (max-width: 1000px) and (min-width: 768px) {
+    .header > .linkList {
+        display: none;
+    }
+    .header .mobileBtnContainer #menuBtn {
+        display: inline-block   ;
+    }
+    .container > .text {
+        width: 40%;
+    }
+    .container-1 .description {
+        margin-left: 5%;
+        text-align: left;
+    }
+    .container-1 .description .text {
+        line-height: 30px;
+    }
+    .container-1 .description .btnContainer {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .container-5 .text {
+        width: 100%;
+    }
+    .container-5 .text .description {
+        padding: 0;
+    }
+    .description .btnContainer .download {
+        margin-bottom: 20px;
+        padding: 16px;
+        width: 260px;
+        margin-right: 30px;
+    }
+    .description .btnContainer #openBtn{
+        padding: 16px;
+        width: 292px;
+    }
+    .formContainer form {
+        margin: 0;
+    }
+    .footer .row1  {
+    grid-template-columns: repeat(8 ,2fr);
+    grid-template-areas: 'infoBox infoBox infoBox . section1 . section2 .' 'infoBox infoBox infoBox . section3 . section4 .';
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header > .linkList {
+        display: none;
+    }
+    .header .mobileBtnContainer #menuBtn {
+        display: inline-block   ;
+    }
+    .container-1 img {
+        height: 105vh;
+    }
+    .container-1 .description {
+        color: #fff;
+        position: absolute;
+        top: 15%;
+        margin: 56px 24px;
+        text-align: left;
+    }
+    .container-1 .description .text {
+        line-height: 22.5px;
+    }
+    .description .btnContainer {
+        flex-direction: column;
+    }
+    .description .btnContainer .download {
+        margin-bottom: 20px;
+        padding: 16px;
+        width: 260px;
+    }
+    .description .btnContainer #openBtn{
+        padding: 16px;
+        width: 292px;
+        height: 54.4px;
+    }
+    .container {
+        flex-direction: column;
+        height: 650px;
+    }
+    .container img {
+        width: 100%;
+    }
+    .container > .text {
+        width: 100%;
+    }
+    .container > .text > .title {
+        font-family: 'Merriweather Sans', sans-serif;
+        padding: 30px 0;
+        font-size: 40px;
+        line-height: 55px;
+        text-align: left;
+    }
+    .container-5 {
+        flex-direction: column-reverse;
+    }
+    .container-5 .text .description {
+        padding: 0;
+    }
+    .subfooter {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer .row1 .infoBox {
+        margin-bottom: 40px;
+    }
+    .footer .row1  {
+        grid-template-columns: repeat(4 ,1fr);
+        grid-template-areas: 'infoBox infoBox infoBox .' 
+        'section1 . section2 . ' 
+        'section3 . section4 .';
+    }
+}
