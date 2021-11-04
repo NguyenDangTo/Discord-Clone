@@ -193,243 +193,173 @@
     margin-right: 8px;
 }
 
-
 /* ----------------MAIN CONTAINER----------------- */
 
-.container {
-    height: 472px;
-    display:flex;
-}
-.container img {
-    width: 60%;
-}
-.container > .text {
-    width: 30%;
-}
-.container > .text > .title {
-    font-family: 'Merriweather Sans', sans-serif;
-    padding: 30px 0;
-    font-size: 40px;
-    line-height: 55px;
-}
-.container > .text > .description {
-    line-height: 35px;
-    font-size: 20px;
-}
-
-/* ---------------CONTAINER 1----------------- */
-
-
-.container-1 {
-    position: relative;
-    height: auto;
-}
-.container-1 img {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-}
-.container-1 .description {
+.main-container {
     color: #fff;
+}
+
+/* ----------------MENU CONTAINER----------------- */
+.container-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #5865F2;
+    padding-bottom: 40px;
+}
+.main-container .menuContainer {
     position: absolute;
-    top: 25%;
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
+    top: 20%;
+    left: 7%;
+    right: 7%;
 }
-.container-1 .description h2 {
-    font-size: 45px;
-    line-height: 40px;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.container-1 .description .text {
-    line-height: 40px;
-    word-wrap: break-word;
-}
-
-/* ---------------BUTTON CONTAINER------------- */
-
-.container-1 .description .btnContainer {
+.main-container .menuContainer .navbar {
     display: flex;
-    padding-top: 40px;
-    justify-content: space-evenly;
+    flex-direction: row;
+    font-size: 16px;
 }
-.description .btnContainer .download {
-    border: none;
-    width: 218px;
-    padding: 12px 16px;
+.main-container .menuContainer .navbar div {
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 2px solid #6a75f0;
+    cursor: default;
+}
+.main-container .menuContainer .navbar div i {
+    margin-left: 4px;
+}
+.main-container .menuContainer .navbar .mainMenu {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+.main-container .menuContainer .navbar .subMenu {
+    position: relative;
+}
+.main-container .menuContainer .navbar .subMenu:hover .subMenuDropdown {
+    z-index: 10;
+}
+.main-container .menuContainer .navbar .subMenu .subMenuDropdown {
+    position: absolute;
     background-color: #fff;
     color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    transition: 0.4s;
-    text-decoration: none;
-    text-align: center;
-}
-.description .btnContainer #openBtn {
-    border: none;
-    width: 250px;
-    padding: 12px 16px;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    transition: 0.4s;
-    cursor: pointer;
-    text-align: center;
-
-}
-.description .btnContainer .download:hover {
-    box-shadow: 0 2px 12px rgb(91, 99, 100);
-    color: rgb(55, 34, 148)
-}
-.description .btnContainer #openBtn:hover {
-    background-color: rgb(50, 50, 50);
-    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    list-style-type: none;
+    width: 280px;
+    padding: 12px;
+    top: calc(100% + 2px);
+    z-index: -10;   
+    border-radius: 8px;
 }
 
-/* ---------------FORM CONTAINER------------- */
-
-.formContainer {
-    display: none;
-    padding-top: 30px;
-}
-.formContainer form {
-    background-color: #fff;
-    width: 380px;
-    margin: auto;
-    display: flex;
-    padding: 8px 12px;
-    border-radius: 30px;
-    justify-content: space-between;
-    animation: appear 0.5s;
-}
-.formContainer form input {
-    padding-left: 5%;
+.main-container .menuContainer .navbar .subMenu .subMenuDropdown li {
+    padding: 12px;
     font-size: 14px;
-    border: none;
-    outline: none;
-    width: 80%;
-}
-.formContainer form button {
-    padding: 10px 28px;
-    border-radius: 28px;
-    background-color: #5865F2;
-    color: #fff;    
-    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 18px;
 }
-.formContainer form button:hover {
-    background-color: #767fe4;
-}
-.formContainer .termsContainer {
-    font-size: 12px;
-    padding-top: 8px;
-}
-.formContainer .termsContainer a {
-    color: #fff;
-}
-
-@keyframes appear {
-    0% {
-        width: 120px;
-    }
-    60% {
-        width: 400px;
-    }
-    100% {
-        width: 380px;
-    }
-}
-
-/* ---------------CONTAINER 2----------------- */
-
-.container-2 {
-    padding: 120px 40px;
-}
-
-/* ---------------CONTAINER 3----------------- */
-
-.container-3 {
+.main-container .menuContainer .navbar .subMenu .subMenuDropdown li:hover {
     background-color: #eee;
-    padding: 120px 40px;
-    flex-direction: row1-reverse;
-}
-
-/* ---------------CONTAINER 4----------------- */
-
-.container-4 {
-    padding: 120px 40px;
-
-    
-}
-
-/* ---------------CONTAINER 4----------------- */
-
-.container-5 {
-    height: auto;
-    background-color: #eee;
-    padding: 120px 40px;
-    padding-bottom: 80px;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-}
-.container-5 img {
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
 
 }
-.container-5 .text {
-    text-align: center;
-    width: 100%;
+
+.subMenuDropdown li {
+    font-size: 16px;
 }
-.container-5 .text .title {
-    padding-left: 5%;
-    padding-right: 5%;
+.main-container .menuContainer .title {
+    font-size: 70px;
+    line-height: 80px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 20px;
     font-weight: 900;
 }
-.container-5 .text .description {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 17px;
+.main-container .menuContainer .description {
+    display: flex;
+}
+.main-container .menuContainer .description .text {
+    width: 50%;
+    padding-right: 20px;
+    padding-top: 30px;
+    line-height: 28px;
+}
+.main-container .menuContainer .description img {
+    width: 50%;
 }
 
+/* ----------------RULE CONTAINER----------------- */
 
-/* --------------------SUBFOOTER-------------------- */
-.subfooter {
-    background-color: #eee;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 120px;
-    text-align: center;
+.ruleContainer {
+    background-color: #F6F6F6;
+    color: #000;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    padding-left: 7%;
+    padding-right: 7%;
 }
-
-.subfooter .title {
-    font-size: 40px;
+.ruleContainer > .title {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 50px;
-    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.ruleContainer .description {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    line-height: 28px;
+    font-size: 17px;
+    color: #4F5660;
+}
+.ruleContainer .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ruleContainer .cardContainer .card {
+    width: 45%;
+}
+.ruleContainer .cardContainer .card .title {
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+/* ----------------CATEGORY CONTAINER----------------- */
+.categoryContainer {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+}
+.categoryContainer-2 {
+    background-color: #F6F6F6;
+}
+.categoryContainer .categoryHeading {
+    width: 40%;
+}
+.categoryContainer .categoryHeading .title {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 50px;
+    color: #000;
+}
+.categoryContainer .categoryHeading .description {
+    padding-top: 15px;
+    padding-bottom: 40px;
+    line-height: 28px;
+    font-size: 17px;
+    color: #4F5660;
+}
+.categoryContainer .linkContainer div {
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+.categoryContainer .linkContainer div a {
+    text-decoration: none;
+    color: #00B0F4;
 
 }
-.subfooter .download {
-    text-decoration: none;
-    padding: 14px 32px;
-    background-color: #5865F2;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 32px;
-    transition: 0.4s;
-}
-.subfooter .download:hover {
-    box-shadow: 0 2px 10px rgb(100, 93, 93);
-    background-color: #707ae7;
+.categoryContainer .linkContainer div a:hover {
+    text-decoration: underline;
 }
 
 /* --------------------FOOTER-------------------- */
@@ -440,6 +370,7 @@
     align-items: center;
     background-color: #23272a;
 }
+
 /* --------------------ROW 1-------------------- */
 
 .footer .row1 {
@@ -557,6 +488,7 @@
     background-color: #767fe4;
 }
 
+
 /* =================RESPONSIVE================ */
 
 @media screen and (max-width: 1000px) and (min-width: 768px) {
@@ -566,8 +498,8 @@
     .header .mobileBtnContainer #menuBtn {
         display: inline-block   ;
     }
-    .container > .text {
-        width: 40%;
+    .container-1 {
+        height: 130vh;
     }
     .container-1 .description {
         margin-left: 5%;
@@ -576,28 +508,36 @@
     .container-1 .description .text {
         line-height: 30px;
     }
-    .container-1 .description .btnContainer {
-        flex-direction: column;
-        padding-top: 20px;
+
+    .main-container .menuContainer .navbar {
+        display: none;
     }
-    .container-5 .text {
+    .main-container .menuContainer .title {
+        font-size: 50px;
+        padding-top: 0;
+        text-align: center;
+    }
+    .main-container .menuContainer .description {
+        flex-direction: column-reverse;
+    }
+    .main-container .menuContainer .description .text {
         width: 100%;
     }
-    .container-5 .text .description {
-        padding: 0;
+    .main-container .menuContainer .description img {
+        width: 100%;
     }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
-        margin-right: 30px;
+
+    .ruleContainer .cardContainer .card {
+        width: 100%;
     }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
+    .categoryContainer {
+        flex-direction: column;
     }
-    .formContainer form {
-        margin: 0;
+    .categoryContainer .categoryHeading {
+        width: 100%;
+    }
+    .categoryContainer .linkContainer div {
+        margin-left: 0;
     }
     .footer .row1  {
     grid-template-columns: repeat(8 ,2fr);
@@ -613,6 +553,9 @@
     .header .mobileBtnContainer #menuBtn {
         display: inline-block   ;
     }
+    .container-1 {
+        height: 130vh;
+    }
     .container-1 img {
         height: 105vh;
     }
@@ -626,45 +569,38 @@
     .container-1 .description .text {
         line-height: 22.5px;
     }
-    .description .btnContainer {
-        flex-direction: column;
+    
+    .main-container .menuContainer .navbar {
+        display: none;
     }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
+    .main-container .menuContainer .title {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 0;
+        text-align: center;
     }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
-        height: 54.4px;
-    }
-    .container {
-        flex-direction: column;
-        height: 650px;
-    }
-    .container img {
-        width: 100%;
-    }
-    .container > .text {
-        width: 100%;
-    }
-    .container > .text > .title {
-        font-family: 'Merriweather Sans', sans-serif;
-        padding: 30px 0;
-        font-size: 40px;
-        line-height: 55px;
-        text-align: left;
-    }
-    .container-5 {
+    .main-container .menuContainer .description {
         flex-direction: column-reverse;
     }
-    .container-5 .text .description {
-        padding: 0;
+    .main-container .menuContainer .description .text {
+        width: 100%;
     }
-    .subfooter {
-        display: flex;
+    .main-container .menuContainer .description img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .ruleContainer .cardContainer .card {
+        width: 100%;
+    }
+    .categoryContainer {
         flex-direction: column;
+    }
+    .categoryContainer .categoryHeading {
+        width: 100%;
+    }
+    .categoryContainer .linkContainer div {
+        margin-left: 0;
     }
     .footer .row1 .infoBox {
         margin-bottom: 40px;

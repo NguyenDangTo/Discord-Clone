@@ -1,16 +1,3 @@
-/* --------------Open in Browser------------- */
-
-const openBtn = document.getElementById("openBtn"),
-      formContainer = document.getElementsByClassName("formContainer"),
-      btnContainer = document.getElementsByClassName("btnContainer");
-
-
-openBtn.addEventListener("click", enterUsername)
-
-function enterUsername() {
-    btnContainer[1].style.display = "none";
-    formContainer[0].style.display = "block";
-}
 
 /* ---------------Open&Close Nav Mobile Menu-------------- */
 
@@ -38,6 +25,19 @@ function closeMobileMenu() {
     backdrop.classList.remove("open")
 }
 
+/* --------------Open in Browser------------- */
+
+const openBtn = document.getElementById("openBtn"),
+      formContainer = document.getElementsByClassName("formContainer"),
+      btnContainer = document.getElementsByClassName("btnContainer");
+
+
+openBtn.addEventListener("click", enterUsername)
+
+function enterUsername() {
+    btnContainer[1].style.display = "none";
+    formContainer[0].style.display = "block";
+}
 
 
 

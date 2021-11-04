@@ -193,49 +193,35 @@
     margin-right: 8px;
 }
 
-
-/* ----------------MAIN CONTAINER----------------- */
-
-.container {
-    height: 472px;
-    display:flex;
-}
-.container img {
-    width: 60%;
-}
-.container > .text {
-    width: 30%;
-}
-.container > .text > .title {
-    font-family: 'Merriweather Sans', sans-serif;
-    padding: 30px 0;
-    font-size: 40px;
-    line-height: 55px;
-}
-.container > .text > .description {
-    line-height: 35px;
-    font-size: 20px;
-}
-
 /* ---------------CONTAINER 1----------------- */
 
 
 .container-1 {
     position: relative;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
 }
-.container-1 img {
+.container-1 .videoBg {
     width: 100%;
-    height: 650px;
-    object-fit: cover;
+    height: 100%;
+    background-image: linear-gradient(90deg, rgb(180, 115, 245), rgb(226, 146, 170));
+}
+.container-1 .videoBg video {
+    position: absolute;
+    min-height: 140%;
+    min-width: 140%;
+    transform: translate(-17rem, -6rem);
 }
 .container-1 .description {
     color: #fff;
     position: absolute;
     top: 25%;
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
+    margin-left: 10%;
+    width: 45%;
+}
+.container-1 .description .logo {
+    color: #fff;
+    text-decoration: none;
 }
 .container-1 .description h2 {
     font-size: 45px;
@@ -245,8 +231,18 @@
     margin-bottom: 20px;
 }
 .container-1 .description .text {
-    line-height: 40px;
+    width: 90%;
+    line-height: 30px;
+    margin-top: 30px;
     word-wrap: break-word;
+    font-size: 17px;
+}
+.container-1 .description > img {
+    width: 50%;
+    top: -30%;
+    right: 0;
+    display: none;
+    position: absolute;
 }
 
 /* ---------------BUTTON CONTAINER------------- */
@@ -254,33 +250,29 @@
 .container-1 .description .btnContainer {
     display: flex;
     padding-top: 40px;
-    justify-content: space-evenly;
 }
-.description .btnContainer .download {
+.description .btnContainer #nitroYear,.description .btnContainer #nitroMonth {
     border: none;
-    width: 218px;
-    padding: 12px 16px;
-    background-color: #fff;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    transition: 0.4s;
-    text-decoration: none;
-    text-align: center;
-}
-.description .btnContainer #openBtn {
-    border: none;
-    width: 250px;
-    padding: 12px 16px;
+    padding: 16px 32px;
     background-color: #000;
     color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
+    font-size: 18px;
+    border-radius: 32px;
     transition: 0.4s;
     cursor: pointer;
     text-align: center;
+    margin-right: 15px;
+}
+.description .btnContainer #nitroYear:hover ,.description .btnContainer #nitroMonth:hover {
+    box-shadow: 0 2px 10px rgb(100, 93, 93);
+    background-color: rgb(66, 61, 61);
+}
+.description .btnContainer #nitroYear span {
+    font-size: 12px;
+    margin-left: 6px;
+    background-color: #5865F2;
+    padding: 6px;
+    border-radius: 16px;
 
 }
 .description .btnContainer .download:hover {
@@ -350,87 +342,185 @@
 /* ---------------CONTAINER 2----------------- */
 
 .container-2 {
-    padding: 120px 40px;
-}
-
-/* ---------------CONTAINER 3----------------- */
-
-.container-3 {
+    display: flex;
+    flex-direction: column;
     background-color: #eee;
-    padding: 120px 40px;
-    flex-direction: row1-reverse;
-}
-
-/* ---------------CONTAINER 4----------------- */
-
-.container-4 {
-    padding: 120px 40px;
-
-    
-}
-
-/* ---------------CONTAINER 4----------------- */
-
-.container-5 {
-    height: auto;
-    background-color: #eee;
-    padding: 120px 40px;
-    padding-bottom: 80px;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-}
-.container-5 img {
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
-
-}
-.container-5 .text {
+    padding-top: 120px;
+    padding-left: 7%;
+    padding-right: 7%;
     text-align: center;
-    width: 100%;
 }
-.container-5 .text .title {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-weight: 900;
+.container-2 > .title {
+    font-size: 41px;
+    line-height: 40px;
+    font-weight: 800;
 }
-.container-5 .text .description {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 17px;
+.container-2 > .text {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.container-2 .perkList {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
+.container-2 .perkList .perkContainer {
+    width: 30%;
+    height: 290px;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+}
+.container-2 .perkList .perkContainer .title {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.container-2 .perkList .perkContainer .description {
+    font-size: 14px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.container-2 .perkList .perkContainer img {
+    position: absolute;
+    width: 50%;
+    height: 40%;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.perkList .betterEmoji {
+    background-image: linear-gradient(142.53deg, rgb(0, 162, 149), rgb(38, 232, 244) 98.75%);
+}
+.perkList .personalProfile {
+    background-image: linear-gradient(321.82deg, rgb(33, 242, 255), rgb(65, 129, 255) 59.22%, rgb(68, 117, 255) 98.02%);
+}
+.perkList .supportServer {
+    background-image: linear-gradient(138.46deg, rgb(62, 112, 255) 1.48%, rgb(154, 152, 255) 98.75%);
+}
+.perkList .repSupport {
+    background-image: linear-gradient(141.85deg, rgb(126, 123, 255), rgb(255, 115, 250));
+}
+.perkList .biggerMemes {
+    background-image: linear-gradient(141.48deg, rgb(248, 55, 238) 1.35%, rgb(255, 205, 75));
+}
+.container-2 .perkList .biggerMemes img {
+    width: 55%;
+}
+.perkList .HDVideo {
+    background-image: linear-gradient(321.73deg, rgb(255, 205, 75) -1.09%, rgb(238, 99, 21) 100.65%);
+}
+.container-2 .perkList .HDVideo img {
+    width: 65%;
+}
 
 /* --------------------SUBFOOTER-------------------- */
+
 .subfooter {
     background-color: #eee;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 120px;
+    padding: 120px 40px;
     text-align: center;
 }
 
 .subfooter .title {
     font-size: 40px;
     line-height: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
 }
-.subfooter .download {
-    text-decoration: none;
-    padding: 14px 32px;
-    background-color: #5865F2;
+.subfooter .btnContainer {
+    display: flex;
+    justify-content: center;
+}
+.subfooter .btnContainer #nitroYear, .subfooter .btnContainer #nitroMonth {
+    width: 30%;
+    border: none;
+    padding: 16px 32px;
+    background-color: #000;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 32px;
     transition: 0.4s;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 25px;
+    margin-left: 25px;
 }
-.subfooter .download:hover {
+.subfooter .btnContainer #nitroYear:hover, .subfooter .btnContainer #nitroMonth:hover {
     box-shadow: 0 2px 10px rgb(100, 93, 93);
-    background-color: #707ae7;
+    background-color: rgb(66, 61, 61);
 }
+.subfooter .btnContainer #nitroYear span {
+    font-size: 12px;
+    margin-left: 6px;
+    background-color: #5865F2;
+    padding: 6px;
+    border-radius: 16px;
+
+}
+
+/* -------------------NITRO CLASSIC------------------- */
+
+
+#nitroClassic {
+    background-color: #7289da;
+    padding-top: 80px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 40px;
+    display: flex;
+
+}
+#nitroClassic img {
+    width: 50%;
+}
+#nitroClassic .nitroClassicContainer {
+    width: 50%;
+}
+#nitroClassic .nitroClassicContainer .text {
+    color: #fff;
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+#nitroClassic .nitroClassicContainer .btnContainer {
+    display: flex;
+    justify-content: space-between;
+}
+#nitroClassic .nitroClassicContainer .btnContainer #nitroYear {
+    width: 50%;
+    border: none;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+#nitroClassic .nitroClassicContainer .btnContainer #nitroYear span {
+    margin-left: 12px;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background-color: #5865F2;
+}
+#nitroClassic .nitroClassicContainer .btnContainer #nitroMonth {
+    width: 35%;
+    border: none;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
 
 /* --------------------FOOTER-------------------- */
 
@@ -440,6 +530,7 @@
     align-items: center;
     background-color: #23272a;
 }
+
 /* --------------------ROW 1-------------------- */
 
 .footer .row1 {
@@ -564,37 +655,51 @@
         display: none;
     }
     .header .mobileBtnContainer #menuBtn {
-        display: inline-block   ;
+        display: inline-block ;
     }
-    .container > .text {
-        width: 40%;
+    .container-1 {
+        height: 80vh
+    }
+    .container-1 .description > img {
+        display: block;
     }
     .container-1 .description {
         margin-left: 5%;
         text-align: left;
+        width: 95%;
     }
     .container-1 .description .text {
         line-height: 30px;
+        width: 60%;
     }
     .container-1 .description .btnContainer {
         flex-direction: column;
         padding-top: 20px;
+        width: 50%;
+
     }
-    .container-5 .text {
+    .description .btnContainer #nitroMonth {
+        margin-top: 20px;
+    }
+    .btnContainer #nitroMonth {
+        width: 70%;
+    }
+    .subfooter .btnContainer #nitroYear, .subfooter .btnContainer #nitroMonth {
+        width: 40%;
+    }
+    #nitroClassic .nitroClassicContainer .btnContainer {
+        flex-direction: column;
+    }
+    #nitroClassic .nitroClassicContainer .btnContainer #nitroYear,
+    #nitroClassic .nitroClassicContainer .btnContainer #nitroMonth {
         width: 100%;
+        margin-top: 20px;
     }
-    .container-5 .text .description {
-        padding: 0;
+    .container-1 .videoBg video {
+        display: none;
     }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
-        margin-right: 30px;
-    }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
+    .container-2 .perkList .perkContainer {
+        width: 45%;
     }
     .formContainer form {
         margin: 0;
@@ -613,58 +718,59 @@
     .header .mobileBtnContainer #menuBtn {
         display: inline-block   ;
     }
-    .container-1 img {
-        height: 105vh;
-    }
     .container-1 .description {
         color: #fff;
         position: absolute;
-        top: 15%;
         margin: 56px 24px;
         text-align: left;
+        width: 90%;
+    }
+    .container-1 .description > img {
+        display: block;
     }
     .container-1 .description .text {
         line-height: 22.5px;
+        width: 90%;
     }
     .description .btnContainer {
         flex-direction: column;
     }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
+    .btnContainer #nitroMonth {
+        margin-top: 20px;
     }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
-        height: 54.4px;
+    .container-1 .videoBg video {
+        display: none;
     }
-    .container {
-        flex-direction: column;
-        height: 650px;
-    }
-    .container img {
+    .container-2 .perkList .perkContainer {
         width: 100%;
-    }
-    .container > .text {
-        width: 100%;
-    }
-    .container > .text > .title {
-        font-family: 'Merriweather Sans', sans-serif;
-        padding: 30px 0;
-        font-size: 40px;
-        line-height: 55px;
-        text-align: left;
-    }
-    .container-5 {
-        flex-direction: column-reverse;
-    }
-    .container-5 .text .description {
-        padding: 0;
     }
     .subfooter {
         display: flex;
         flex-direction: column;
+    }
+    .subfooter .btnContainer {
+        flex-direction: column;
+    }
+    .subfooter .btnContainer #nitroYear, .subfooter .btnContainer #nitroMonth {
+        width: 100%;
+        margin-left: 0;
+
+    }
+    #nitroClassic {
+        flex-direction: column;
+    }
+    #nitroClassic > img {
+        display: none;
+    }
+    #nitroClassic .nitroClassicContainer {
+        width: 100%;
+    }
+    #nitroClassic .nitroClassicContainer .btnContainer {
+        flex-direction: column;
+    }
+    #nitroClassic .nitroClassicContainer .btnContainer #nitroYear,
+    #nitroClassic .nitroClassicContainer .btnContainer #nitroMonth {
+        width: 100%;
     }
     .footer .row1 .infoBox {
         margin-bottom: 40px;

@@ -10,7 +10,6 @@
 .header {
     display: flex;
     align-items: center;
-    position: absolute;
     top: 0;
     left: 0;
     justify-content: space-between;
@@ -22,11 +21,10 @@
     padding: 6px 12px;
     margin-left: 7%;
     font-size: 24px;
-
 }
 .header .logo a {
     text-decoration: none;
-    color: #fff;
+    color: #5865F2;
 }
 .header .logo span {
     font-size: 24px;
@@ -45,7 +43,7 @@
 }
 .header .linkList li a {
     text-decoration: none;
-    color: #fff;
+    color: #5865F2;
     padding-left: 40px;
     font-weight: 600;
     font-size: 14px;
@@ -60,8 +58,7 @@
 }
 .header .mobileBtnContainer .log-btn {
     text-decoration: none;
-    background-color: #fff;
-    color: #000;
+    color: #5865F2;
     background-color: #fff;
     border-radius: 24px;
     padding: 8px 14px;
@@ -76,11 +73,11 @@
 }
 .header .mobileBtnContainer #menuBtn {
     display: none;
-    color: #fff;
+    color: #5865F2;
     font-size: 32px;
     position: absolute;
     right: 30px;
-    top: 50%;
+    top: 43px;
     transform: translateY(-50%);
     cursor: pointer;
 }
@@ -96,6 +93,7 @@
     left: 0;
     width: 100%;
     display: none;
+    z-index: 999;
 }
 .header .backdrop.open {
     display: block;
@@ -193,243 +191,239 @@
     margin-right: 8px;
 }
 
-
-/* ----------------MAIN CONTAINER----------------- */
-
-.container {
-    height: 472px;
-    display:flex;
-}
-.container img {
-    width: 60%;
-}
-.container > .text {
-    width: 30%;
-}
-.container > .text > .title {
-    font-family: 'Merriweather Sans', sans-serif;
-    padding: 30px 0;
-    font-size: 40px;
-    line-height: 55px;
-}
-.container > .text > .description {
-    line-height: 35px;
-    font-size: 20px;
+/* ------------------MAIN CONTAINER--------------- */
+.mainContainer {
+    overflow: hidden;
 }
 
-/* ---------------CONTAINER 1----------------- */
+/* ------------------MAIN CONTENT----------------- */
 
-
-.container-1 {
-    position: relative;
-    height: auto;
-}
-.container-1 img {
+.mainContainer .mainContent {
+    background-image: url(../imgs/help1.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    padding: 0 20px;
+    text-align: center;
     width: 100%;
-    height: 650px;
-    object-fit: cover;
 }
-.container-1 .description {
-    color: #fff;
-    position: absolute;
-    top: 25%;
-    margin-left: 25%;
-    margin-right: 25%;
-    text-align: center;
+.mainContent .inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    max-width: 610px;
 }
-.container-1 .description h2 {
-    font-size: 45px;
+.mainContent .inner .title {
+    font-size: 35px;
     line-height: 40px;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.container-1 .description .text {
-    line-height: 40px;
-    word-wrap: break-word;
-}
-
-/* ---------------BUTTON CONTAINER------------- */
-
-.container-1 .description .btnContainer {
-    display: flex;
-    padding-top: 40px;
-    justify-content: space-evenly;
-}
-.description .btnContainer .download {
-    border: none;
-    width: 218px;
-    padding: 12px 16px;
-    background-color: #fff;
-    color: #000;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    transition: 0.4s;
-    text-decoration: none;
-    text-align: center;
-}
-.description .btnContainer #openBtn {
-    border: none;
-    width: 250px;
-    padding: 12px 16px;
-    background-color: #000;
     color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 24px;
-    transition: 0.4s;
-    cursor: pointer;
-    text-align: center;
-
+    padding: 20px 0;
 }
-.description .btnContainer .download:hover {
-    box-shadow: 0 2px 12px rgb(91, 99, 100);
-    color: rgb(55, 34, 148)
-}
-.description .btnContainer #openBtn:hover {
-    background-color: rgb(50, 50, 50);
-    box-shadow: 0 2px 8px rgb(0, 0, 0);
-}
-
-/* ---------------FORM CONTAINER------------- */
-
-.formContainer {
-    display: none;
-    padding-top: 30px;
-}
-.formContainer form {
+.mainContent .inner form {
     background-color: #fff;
-    width: 380px;
-    margin: auto;
-    display: flex;
-    padding: 8px 12px;
+    padding: 8px;
+    border: 1px solid #666;
     border-radius: 30px;
-    justify-content: space-between;
-    animation: appear 0.5s;
+    text-align: left;
 }
-.formContainer form input {
-    padding-left: 5%;
-    font-size: 14px;
+.mainContent .inner form i {
+    margin: 0 8px;
+    color: #666
+}
+.mainContent .inner form input {
     border: none;
     outline: none;
-    width: 80%;
-}
-.formContainer form button {
-    padding: 10px 28px;
-    border-radius: 28px;
-    background-color: #5865F2;
-    color: #fff;    
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-.formContainer form button:hover {
-    background-color: #767fe4;
-}
-.formContainer .termsContainer {
-    font-size: 12px;
-    padding-top: 8px;
-}
-.formContainer .termsContainer a {
-    color: #fff;
 }
 
-@keyframes appear {
+/* ------------------INTRO----------------- */
+
+.mainContainer .intro {
+    text-align: center;
+    margin-top: 80px;
+    color: #666;
+}
+.mainContainer .intro .title {
+    font-size: 28px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+.mainContainer .intro p {
+    padding: 0 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    line-height: 25px;
+}
+.mainContainer .intro p a {
+    text-decoration: none;
+    color: #5865F2;
+}
+.mainContainer .intro p a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------CATEGORY GRID----------------- */
+
+.mainContainer .category-grid .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainContainer .category-grid .flex-container a {
+    text-decoration: none;
+}
+.mainContainer .category-grid .flex-container .flex-item {
+    background-color: #FFFFFF;
+    width: 240px;
+    height: 260px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 9px 30px rgb(200 200 200 / 30%);
+}
+
+.mainContainer .category-grid .flex-container .flex-item:hover {
+    animation: moveOn 0.5s forwards;
+}
+
+@keyframes moveOn {
     0% {
-        width: 120px;
-    }
-    60% {
-        width: 400px;
+        transform: translateY(0);
     }
     100% {
-        width: 380px;
+        transform: translateY(-10px);
     }
-}
-
-/* ---------------CONTAINER 2----------------- */
-
-.container-2 {
-    padding: 120px 40px;
-}
-
-/* ---------------CONTAINER 3----------------- */
-
-.container-3 {
-    background-color: #eee;
-    padding: 120px 40px;
-    flex-direction: row1-reverse;
-}
-
-/* ---------------CONTAINER 4----------------- */
-
-.container-4 {
-    padding: 120px 40px;
-
     
 }
 
-/* ---------------CONTAINER 4----------------- */
-
-.container-5 {
-    height: auto;
-    background-color: #eee;
-    padding: 120px 40px;
-    padding-bottom: 80px;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-}
-.container-5 img {
-    width: 90%;
-    padding-right: 5%;
-    padding-left: 5%;
-
-}
-.container-5 .text {
-    text-align: center;
-    width: 100%;
-}
-.container-5 .text .title {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-weight: 900;
-}
-.container-5 .text .description {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 17px;
-}
-
-
-/* --------------------SUBFOOTER-------------------- */
-.subfooter {
-    background-color: #eee;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 120px;
-    text-align: center;
-}
-
-.subfooter .title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 60px;
-
-}
-.subfooter .download {
-    text-decoration: none;
-    padding: 14px 32px;
-    background-color: #5865F2;
-    color: #fff;
+.flex-container .flex-item .title {
+    margin-top: 115px;
+    margin-bottom: 20px;
+    color: #5865F2;
     font-size: 20px;
-    border-radius: 32px;
-    transition: 0.4s;
 }
-.subfooter .download:hover {
-    box-shadow: 0 2px 10px rgb(100, 93, 93);
-    background-color: #707ae7;
+.flex-container .flex-item hr {
+    width: 70px;
+    border: none;
+    height: 1px;
+    background-color: #99aab5;
+    margin: -6px auto 18px;
+}
+.flex-container .flex-item .description {
+    margin-top: -5px;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ---------ADVERTISEMENT-------- */
+
+.flex-container .advertisement {
+    background-image: url(../imgs/annoucement.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------INTERFACE-------- */
+.flex-container .interface {
+    background-image: url(../imgs/UxUi.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------ACCOUNT SETTINGS-------- */
+.flex-container .account-settings {
+    background-image: url(../imgs/accountSetting.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------TEXT CHAT-------- */
+.flex-container .text-chat {
+    background-image: url(../imgs/text-chat.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------SERVER CONFIGURATION-------- */
+.flex-container .server-setup {
+    background-image: url(../imgs/serverSetup.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------COMMUNITY PROGRAMS-------- */
+.flex-container .community-programs {
+    background-image: url(../imgs/communityProgram.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------NITRO-------- */
+.flex-container .nitro {
+    background-image: url(../imgs/store.svg );
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------BILLING-------- */
+.flex-container .billing {
+    background-image: url(../imgs/billing.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------TRUST AND SAFETY-------- */
+.flex-container .trust-safety {
+    background-image: url(../imgs/trustsandsafety.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+/* ---------FAQ-------- */
+.flex-container .faq {
+    background-image: url(../imgs/FAQS.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+
+
+.category-grid .intro {
+    margin-bottom: 15px;
+}
+.category-grid .intro h2 {
+    font-weight: 400;
+}
+
+/* ---------GAME DEV-------- */
+.flex-container .game-dev {
+    background-image: url(../imgs/gameDev.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
+}
+
+
+/* ---------TWITTER-------- */
+.flex-container .twitter {
+    background-image: url(../imgs/twitter.svg);
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 106px;
 }
 
 /* --------------------FOOTER-------------------- */
@@ -440,6 +434,68 @@
     align-items: center;
     background-color: #23272a;
 }
+
+/* --------------------HOOK------------------- */
+.footer .hook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.footer .hook a {
+    width: 250px;
+    text-decoration: none;
+    margin: 30px 0;
+}
+.footer .hook .button {
+    width: 100%;
+    border: none;
+    background-color: #3BA55C;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 8px;
+    border-radius: 32px;
+    font-weight: 600;
+}
+.footer .hook .button:hover {
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+}
+.footer .hook .apps {
+    width: 814px;
+    height: 145px;
+    background-image: url(../imgs/appContain.png);
+    background-size: 814px 145px;
+    position: relative;
+    border-bottom: 1px solid #666666;
+}
+.footer .hook .apps .app-icon {
+    opacity: 0.5;
+    position: absolute;
+    top: 30px;
+}
+.footer .hook .apps .app-icon:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+.footer .hook .apps .icon-browser {
+    left: 80px;
+}
+.footer .hook .apps .icon-android {
+    left: 377px;
+}
+.footer .hook .apps .icon-ios {
+    left: 472px;
+}
+.footer .hook .apps .icon-window {
+    left: 620px;
+}
+.footer .hook .apps .icon-osx {
+    left: 690px;
+    
+}
+
 /* --------------------ROW 1-------------------- */
 
 .footer .row1 {
@@ -566,38 +622,11 @@
     .header .mobileBtnContainer #menuBtn {
         display: inline-block   ;
     }
-    .container > .text {
-        width: 40%;
-    }
-    .container-1 .description {
-        margin-left: 5%;
-        text-align: left;
-    }
-    .container-1 .description .text {
-        line-height: 30px;
-    }
-    .container-1 .description .btnContainer {
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    .container-5 .text {
-        width: 100%;
-    }
-    .container-5 .text .description {
-        padding: 0;
-    }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
-        margin-right: 30px;
-    }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
-    }
     .formContainer form {
         margin: 0;
+    }
+    .footer .hook .apps {
+        display: none;
     }
     .footer .row1  {
     grid-template-columns: repeat(8 ,2fr);
@@ -613,58 +642,8 @@
     .header .mobileBtnContainer #menuBtn {
         display: inline-block   ;
     }
-    .container-1 img {
-        height: 105vh;
-    }
-    .container-1 .description {
-        color: #fff;
-        position: absolute;
-        top: 15%;
-        margin: 56px 24px;
-        text-align: left;
-    }
-    .container-1 .description .text {
-        line-height: 22.5px;
-    }
-    .description .btnContainer {
-        flex-direction: column;
-    }
-    .description .btnContainer .download {
-        margin-bottom: 20px;
-        padding: 16px;
-        width: 260px;
-    }
-    .description .btnContainer #openBtn{
-        padding: 16px;
-        width: 292px;
-        height: 54.4px;
-    }
-    .container {
-        flex-direction: column;
-        height: 650px;
-    }
-    .container img {
-        width: 100%;
-    }
-    .container > .text {
-        width: 100%;
-    }
-    .container > .text > .title {
-        font-family: 'Merriweather Sans', sans-serif;
-        padding: 30px 0;
-        font-size: 40px;
-        line-height: 55px;
-        text-align: left;
-    }
-    .container-5 {
-        flex-direction: column-reverse;
-    }
-    .container-5 .text .description {
-        padding: 0;
-    }
-    .subfooter {
-        display: flex;
-        flex-direction: column;
+    .footer .hook .apps {
+        display: none;
     }
     .footer .row1 .infoBox {
         margin-bottom: 40px;
