@@ -598,6 +598,7 @@
     }
     .formContainer form {
         margin: 0;
+	width: auto;
     }
     .footer .row1  {
     grid-template-columns: repeat(8 ,2fr);
