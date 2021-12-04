@@ -203,7 +203,6 @@
     background-position: center;
     background-size: cover;
     height: 300px;
-    padding: 0 20px;
     text-align: center;
     width: 100%;
 }
@@ -212,7 +211,7 @@
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    max-width: 610px;
+    max-width: 90%;
 }
 .mainContent .inner .title {
     font-size: 35px;
